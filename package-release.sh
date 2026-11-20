@@ -62,6 +62,7 @@ function build_arch {
 
   meson setup "$@"                     \
         --buildtype "${opt_buildtype}" \
+        -Denable_trace=true            \
         --prefix "$VKD3D_BUILD_DIR"    \
         $opt_strip                     \
         --bindir "${arch}"            \
